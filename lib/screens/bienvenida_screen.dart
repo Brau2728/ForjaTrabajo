@@ -14,10 +14,23 @@ class BienvenidaScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 80),
+
+               // Logo en la parte superior
+              Image.asset(
+              'assets/logo.png',
+              height: 100, // puedes ajustar el tamaño
+              ),
+
+             const SizedBox(height: 200),
+
+
               Container(    //contenedor del bienvenido
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 24),
-              color: Colors.blue, // Fondo azul
+              decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(20), // redondear los contornos del contenedor
+              ),
               child: Text(
                 'Bienvenido',
                   textAlign: TextAlign.center,
@@ -30,7 +43,7 @@ class BienvenidaScreen extends StatelessWidget {
 
               const SizedBox(height: 16),
               Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                'Buscas algun servicio o quieres ofrecer uno? Bueno estas en el lugar correcto',
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
