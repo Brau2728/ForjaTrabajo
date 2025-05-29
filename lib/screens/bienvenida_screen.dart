@@ -13,7 +13,7 @@ class BienvenidaScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 80),
+              const SizedBox(height: 120),
 
                // Logo en la parte superior
               Image.asset(
@@ -21,34 +21,25 @@ class BienvenidaScreen extends StatelessWidget {
               height: 100, // puedes ajustar el tamaño
               ),
 
-             const SizedBox(height: 200),
+             const SizedBox(height: 250),
 
 
-              Container(    //contenedor del bienvenido
+              Container(    //contenedor del bienvenido*******************
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 24),
               decoration: BoxDecoration(
               color: Colors.blue,
               borderRadius: BorderRadius.circular(20), // redondear los contornos del contenedor
               ),
-              child: Text(
-                'Bienvenido',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              ),
+              child: Column(
+                //crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Bienvenido', textAlign: TextAlign.center, style: TextStyle(fontSize: 30, color: Colors.white)),
+                  Text('Buscas algun servicio o quieres ofrecer uno? Bueno estas en el lugar correcto', textAlign: TextAlign.center, style: TextStyle(fontSize: 16, color: Colors.white)),
 
-              const SizedBox(height: 16),
-              Text(
-                'Buscas algun servicio o quieres ofrecer uno? Bueno estas en el lugar correcto',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
-              const Spacer(),
-              Row(
+                  const SizedBox(height: 40),
+
+                  Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
@@ -57,7 +48,7 @@ class BienvenidaScreen extends StatelessWidget {
                       Navigator.pushNamed(context, '/login');
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -65,7 +56,7 @@ class BienvenidaScreen extends StatelessWidget {
                     ),
                     child: const Text(
                       'Iniciar sesión',
-                      style: TextStyle(color: Colors.white, fontSize: 16),
+                      style: TextStyle(color: Colors.blue, fontSize: 16),
                     ),
                   ),
                   OutlinedButton(
@@ -74,7 +65,9 @@ class BienvenidaScreen extends StatelessWidget {
                       Navigator.pushNamed(context, '/register');
                     },
                     style: OutlinedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                      foregroundColor: Colors.white,
+                      backgroundColor: const Color.fromARGB(255, 25, 111, 182),
+                       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -86,7 +79,14 @@ class BienvenidaScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 40),
+
+                ]
+              )
+              ),
+              
+              const Spacer(),
+              
+              const SizedBox(height: 30),
             ],
           ),
         ),
