@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/bienvenida_screen.dart'; 
+import 'screens/login_screen.dart';
+import 'screens/registro_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -8,11 +10,17 @@ void main() {
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
-  @override
+ @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false, //oculta la cinta de debug
-      home: BienvenidaScreen(), //vinculacion de la pantala de bienvenida
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Forja Trabajo',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const BienvenidaScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/register': (context) => const RegistroScreen(), // opcional
+      },
     );
   }
 }
