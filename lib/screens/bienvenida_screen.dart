@@ -17,11 +17,11 @@ class BienvenidaScreen extends StatelessWidget {
 
                // Logo en la parte superior
               Image.asset(
-              'assets/logo.png',
-              height: 100, // puedes ajustar el tamaño
+              'assets/logo_300.png',
+              height: 150, // puedes ajustar el tamaño
               ),
 
-             const SizedBox(height: 250),
+             const SizedBox(height: 200),
 
 
               Container(    //contenedor del bienvenido*******************

@@ -9,6 +9,8 @@ class RegistroScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Registro'),
         backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        
       ),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
@@ -63,6 +65,7 @@ class RegistroScreen extends StatelessWidget {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('Cuenta creada')),
                   );
+                  Navigator.pushNamed(context, '/');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,

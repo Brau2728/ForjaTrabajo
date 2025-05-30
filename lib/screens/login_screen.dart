@@ -9,6 +9,7 @@ class LoginScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Iniciar sesión'),
         backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
@@ -43,6 +44,7 @@ class LoginScreen extends StatelessWidget {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Iniciando sesión...')),
                 );
+                Navigator.pushNamed(context, '/homescreen');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
