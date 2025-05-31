@@ -96,6 +96,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: ElevatedButton(
                       onPressed: () {
                         // Acción de registrar
+                        Navigator.pushNamed(context, '/homescreen');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.indigo[800],

@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
   final double plomeroLeft;
   final double plomeroBottom;
   final double mecanicoRight;
+  final double plomeroTop;
   final double mecanicoBottom;
 
   const HomeScreen({
@@ -29,6 +30,7 @@ class HomeScreen extends StatelessWidget {
     this.electricistaTop = 110,
     this.plomeroLeft = 100,
     this.plomeroBottom = 30,
+    this.plomeroTop = 110,
     this.mecanicoRight = 30,
     this.mecanicoBottom = 40,
   });
@@ -165,7 +167,7 @@ class HomeScreen extends StatelessWidget {
                         // Botón de Plomería
                         Positioned(
                           left: 205,
-                          bottom: 46,
+                          bottom: 30,
                           child: _buildCircularButton(
                             icon: Icons.plumbing,
                             label: 'Plomería',
