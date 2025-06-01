@@ -26,7 +26,7 @@ class _ServidorPerfilState extends State<ServidorPerfil> {
     // Navegación basada en el índice seleccionado
     switch (index) {
       case 0:
-        Navigator.pushNamed(context, '/');
+        Navigator.pushNamed(context, '/homescreen');
         break;
       case 1:
         Navigator.pushNamed(context, '/');
