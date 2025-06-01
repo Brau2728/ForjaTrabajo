@@ -82,6 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
+        
         slivers: [
           SliverToBoxAdapter(
             child: SizedBox(
