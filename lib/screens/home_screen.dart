@@ -54,9 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // Asegúrate de que tus rutas estén definidas en tu MaterialApp.
     switch (index) {
       case 0:
-        // Ya estamos en la pantalla de inicio, no se necesita navegación
-        // o si hay una ruta específica para esta intro, usarla.
-        // Por ejemplo, Navigator.pushNamed(context, '/home');
+    
         break;
       case 1:
         Navigator.pushNamed(context, '/trabajos'); // Ruta para la pantalla de trabajos
@@ -82,7 +80,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
-        
         slivers: [
           SliverToBoxAdapter(
             child: SizedBox(

@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => const BienvenidaScreen(),
         '/login': (context) => const LoginScreen(),
-        '/register': (context) => const RegisterPage(), // opcional dos
+        '/register': (context) => const RegisterPage(), // opcional 
         '/homescreen': (context) => const HomeScreen(),
          '/servidor_perf': (context) => const ServidorPerfil(),
       },
